@@ -1,0 +1,8 @@
+procon.code-workspace
+*.exe
+*.txt
+*.out
+.vscode/
+.clang-format
+*.json
+untracked/
