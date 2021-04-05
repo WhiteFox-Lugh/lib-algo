@@ -63,6 +63,17 @@ lint lcm_vec(vector<lint> vec) {
   return res;
 }
 
+lint extgcd(lint a, lint b, lint &x, lint &y) {
+  lint g = a;
+  x = 1;
+  y = 0;
+  if (b != 0) {
+    g = extgcd(b, a % b, y, x);
+    y -= (a / b) * x;
+  }
+  return g;
+}
+
 lint power(lint x, lint n, lint mod = MOD) {
   lint ret = 1;
   while (n > 0) {
